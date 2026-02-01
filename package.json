@@ -6,28 +6,18 @@
   "packageManager": "pnpm@10.4.1",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
     "@trpc/server": "^11.6.0",
     "dotenv": "^17.2.2",
     "express": "^4.21.2",
-    "multer": "^2.0.2",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "multer": "^2.0.2"
   },
   "devDependencies": {
-    "@builder.io/vite-plugin-jsx-loc": "^0.1.1",
-    "@tailwindcss/vite": "^4.1.18",
-    "@vitejs/plugin-react": "^5.1.2",
-    "autoprefixer": "^10.4.24",
     "esbuild": "^0.25.12",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
     "tsx": "^4.21.0",
-    "typescript": "5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-manus-runtime": "^0.0.57"
+    "typescript": "5.9.3"
   }
 }
