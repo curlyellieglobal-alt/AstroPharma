@@ -1,3 +1,8 @@
 export default function App() {
-  return <h1 style={{ padding: 40 }}>🔥 CURlyEllie WORKS 🔥</h1>;
+  return (
+    <div style={{ padding: 40 }}>
+      <h1>🔥 CurlyEllie WORKS 🔥</h1>
+      <p>If you see this, React is running correctly.</p>
+    </div>
+  );
 }
