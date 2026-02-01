@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, email, name, isActive, passwordHash FROM adminCredentials WHERE email = 'Mohamedelsoulia@gmail.com';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT id, email, name, isActive, passwordHash FROM adminCredentials WHERE email = 'Mohamedelsoulia@gmail.com';",
+  "rows": [
+    {
+      "id": "1",
+      "email": "Mohamedelsoulia@gmail.com",
+      "name": "Mohamed Elsoulia",
+      "isActive": "1",
+      "passwordHash": "$2b$10$.nH26wtail4bVPMm4Inx0eDh0LR9QNP.UmETCdm49GbCkdC6vi.hG"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tname\tisActive\tpasswordHash\n1\tMohamedelsoulia@gmail.com\tMohamed Elsoulia\t1\t$2b$10$.nH26wtail4bVPMm4Inx0eDh0LR9QNP.UmETCdm49GbCkdC6vi.hG\n",
+  "stderr": "",
+  "execution_time_ms": 1538
+}

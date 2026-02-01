@@ -1,0 +1,8 @@
+{
+  "query": "DELETE FROM adminCredentials; INSERT INTO adminCredentials (id, email, name, passwordHash, isActive, createdAt, lastLogin) VALUES ('admin-1', 'Mohamedelsoulia@gmail.com', 'Mohamed Elsoulia', '$2b$10$.nH26wtail4bVPMm4Inx0eDh0LR9QNP.UmETCdm49GbCkdC6vi.hG', true, NOW(), NULL);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute DELETE FROM adminCredentials; INSERT INTO adminCredentials (id, email, name, passwordHash, isActive, createdAt, lastLogin) VALUES ('admin-1', 'Mohamedelsoulia@gmail.com', 'Mohamed Elsoulia', '$2b$10$.nH26wtail4bVPMm4Inx0eDh0LR9QNP.UmETCdm49GbCkdC6vi.hG', true, NOW(), NULL);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1366 (HY000) at line 1: Incorrect ? value: '?' for column 'id' at row 1"
+  ]
+}

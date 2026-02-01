@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE products ADD COLUMN IF NOT EXISTS priceUSD DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceEGP DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceEUR DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceGBP DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceSAR DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceAED DECIMAL(10,2);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute ALTER TABLE products ADD COLUMN IF NOT EXISTS priceUSD DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceEGP DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceEUR DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceGBP DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceSAR DECIMAL(10,2);\nALTER TABLE products ADD COLUMN IF NOT EXISTS priceAED DECIMAL(10,2);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 5299
+}

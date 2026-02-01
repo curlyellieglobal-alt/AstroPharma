@@ -1,0 +1,2 @@
+ALTER TABLE `referralStats` MODIFY COLUMN `totalRewardsEarned` decimal(10,2) DEFAULT '0';--> statement-breakpoint
+ALTER TABLE `referralStats` MODIFY COLUMN `totalRewardsPaid` decimal(10,2) DEFAULT '0';

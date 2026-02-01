@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO siteSettings (settingKey, settingValue, settingType, description) VALUES \n('whatsapp_phone', '+201010493262', 'text', 'WhatsApp Business Phone Number for customer redirects'),\n('whatsapp_notification_phone', '+201010493262', 'text', 'WhatsApp Business Phone Number for admin notifications'),\n('whatsapp_enabled', 'true', 'boolean', 'Enable automatic WhatsApp redirect after payment'),\n('whatsapp_notifications_enabled', 'true', 'boolean', 'Enable WhatsApp notifications for new orders'),\n('whatsapp_message_template', 'Hello! Thank you for your order.\\n\\nOrder ID: {orderId}\\nCustomer: {customerName}\\nTotal: {total}\\n\\nItems:\\n{items}\\n\\nShipping Address:\\n{shippingAddress}\\n\\nThank you for choosing Curly Ellie!', 'text', 'WhatsApp message template for customer communication');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute INSERT INTO siteSettings (settingKey, settingValue, settingType, description) VALUES \n('whatsapp_phone', '+201010493262', 'text', 'WhatsApp Business Phone Number for customer redirects'),\n('whatsapp_notification_phone', '+201010493262', 'text', 'WhatsApp Business Phone Number for admin notifications'),\n('whatsapp_enabled', 'true', 'boolean', 'Enable automatic WhatsApp redirect after payment'),\n('whatsapp_notifications_enabled', 'true', 'boolean', 'Enable WhatsApp notifications for new orders'),\n('whatsapp_message_template', 'Hello! Thank you for your order.\\n\\nOrder ID: {orderId}\\nCustomer: {customerName}\\nTotal: {total}\\n\\nItems:\\n{items}\\n\\nShipping Address:\\n{shippingAddress}\\n\\nThank you for choosing Curly Ellie!', 'text', 'WhatsApp message template for customer communication');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1503
+}

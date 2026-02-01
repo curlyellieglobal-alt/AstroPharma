@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, name, images, JSON_LENGTH(images) as image_count FROM products WHERE slug = '6 Packs CurlyEllie' LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT id, name, images, JSON_LENGTH(images) as image_count FROM products WHERE slug = '6 Packs CurlyEllie' LIMIT 1;",
+  "rows": [
+    {
+      "id": "60003",
+      "name": "6 Packs CurlyEllie",
+      "images": "[\"https://d2xsxph8kpxj0f.cloudfront.net/310519663141241879/fy8vMHZMgXLRjRhidtpLfH/uploads/1769816985573-6lwqz0-curly_ellie_6_bottles_offer.png\"]",
+      "image_count": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\timages\timage_count\n60003\t6 Packs CurlyEllie\t[\"https://d2xsxph8kpxj0f.cloudfront.net/310519663141241879/fy8vMHZMgXLRjRhidtpLfH/uploads/1769816985573-6lwqz0-curly_ellie_6_bottles_offer.png\"]\t1\n",
+  "stderr": "",
+  "execution_time_ms": 1538
+}

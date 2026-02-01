@@ -1,0 +1,18 @@
+{
+  "query": "SELECT COUNT(*) as total, currency FROM products GROUP BY currency;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT COUNT(*) as total, currency FROM products GROUP BY currency;",
+  "rows": [
+    {
+      "total": "3",
+      "currency": "EGP"
+    },
+    {
+      "total": "1",
+      "currency": "USD"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tcurrency\n3\tEGP\n1\tUSD\n",
+  "stderr": "",
+  "execution_time_ms": 1567
+}

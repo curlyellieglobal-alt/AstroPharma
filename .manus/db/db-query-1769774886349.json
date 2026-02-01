@@ -1,0 +1,14 @@
+{
+  "query": "SELECT COUNT(*) as count, SUM(CASE WHEN isActive = 1 THEN 1 ELSE 0 END) as active_count FROM savedReplies;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT COUNT(*) as count, SUM(CASE WHEN isActive = 1 THEN 1 ELSE 0 END) as active_count FROM savedReplies;",
+  "rows": [
+    {
+      "count": "0",
+      "active_count": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "count\tactive_count\n0\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 1543
+}

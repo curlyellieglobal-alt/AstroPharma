@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE siteSettings SET settingValue = '00201010493262' WHERE settingKey = 'whatsapp_phone';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute UPDATE siteSettings SET settingValue = '00201010493262' WHERE settingKey = 'whatsapp_phone';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1560
+}

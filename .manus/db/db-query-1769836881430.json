@@ -1,0 +1,30 @@
+{
+  "query": "SELECT id, name, currency FROM products LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT id, name, currency FROM products LIMIT 10;",
+  "rows": [
+    {
+      "id": "90021",
+      "name": "3 Packs CurlyEllie",
+      "currency": "USD"
+    },
+    {
+      "id": "90023",
+      "name": "6 Packs CurlyEllie",
+      "currency": "EGP"
+    },
+    {
+      "id": "90024",
+      "name": "3 Packs CurlyEllie",
+      "currency": "EGP"
+    },
+    {
+      "id": "90025",
+      "name": "1 Pack CurlyEllie",
+      "currency": "EGP"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tcurrency\n90021\t3 Packs CurlyEllie\tUSD\n90023\t6 Packs CurlyEllie\tEGP\n90024\t3 Packs CurlyEllie\tEGP\n90025\t1 Pack CurlyEllie\tEGP\n",
+  "stderr": "",
+  "execution_time_ms": 1513
+}

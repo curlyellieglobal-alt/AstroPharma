@@ -1,0 +1,55 @@
+{
+  "query": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='paymentMethods' LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='paymentMethods' LIMIT 20;",
+  "rows": [
+    {
+      "COLUMN_NAME": "id"
+    },
+    {
+      "COLUMN_NAME": "name"
+    },
+    {
+      "COLUMN_NAME": "displayName"
+    },
+    {
+      "COLUMN_NAME": "displayNameAr"
+    },
+    {
+      "COLUMN_NAME": "description"
+    },
+    {
+      "COLUMN_NAME": "descriptionAr"
+    },
+    {
+      "COLUMN_NAME": "icon"
+    },
+    {
+      "COLUMN_NAME": "isActive"
+    },
+    {
+      "COLUMN_NAME": "displayOrder"
+    },
+    {
+      "COLUMN_NAME": "fees"
+    },
+    {
+      "COLUMN_NAME": "minAmount"
+    },
+    {
+      "COLUMN_NAME": "maxAmount"
+    },
+    {
+      "COLUMN_NAME": "supportedCurrencies"
+    },
+    {
+      "COLUMN_NAME": "createdAt"
+    },
+    {
+      "COLUMN_NAME": "updatedAt"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\nid\nname\ndisplayName\ndisplayNameAr\ndescription\ndescriptionAr\nicon\nisActive\ndisplayOrder\nfees\nminAmount\nmaxAmount\nsupportedCurrencies\ncreatedAt\nupdatedAt\n",
+  "stderr": "",
+  "execution_time_ms": 1521
+}

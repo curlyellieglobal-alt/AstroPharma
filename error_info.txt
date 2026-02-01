@@ -1,0 +1,6 @@
+Error: useLanguage must be used within LanguageProvider
+
+This error occurs because the LanguageSelector component uses useLanguage hook
+but the LanguageProvider is not wrapping the app.
+
+Solution: Add LanguageProvider to App.tsx
