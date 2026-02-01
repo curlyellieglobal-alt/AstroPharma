@@ -1,8 +1,8 @@
 function App() {
   return (
     <div style={{ padding: 40 }}>
-      <h1>APP RENDERING WORKS ✅</h1>
-      <p>لو الرسالة دي ظهرت، يبقى React شغال 100%</p>
+      <h1>✅ CurlyEllie is running</h1>
+      <p>If you see this, React is connected correctly.</p>
     </div>
   );
 }
