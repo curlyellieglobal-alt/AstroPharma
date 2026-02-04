@@ -7,7 +7,7 @@
   "deploy": {
     "startCommand": "pnpm run start",
     "restartPolicyType": "ON_FAILURE",
-    "healthcheckPath": "/",
+    "healthcheckPath": "/api/health",
     "healthcheckTimeout": 100,
     "serviceName": "curlyellie"
   }
