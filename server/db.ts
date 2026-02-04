@@ -772,12 +772,27 @@ export async function getChatMessages(conversationId: number): Promise<ChatMessa
     .orderBy(chatMessages.createdAt);
 }
 
-export async function getAllChatConversations(): Promise<ChatConversation[]> {
+export async function getAllChatConversations(assignedTo?: number): Promise<ChatConversation[]> {
   const db = await getDb();
   if (!db) return [];
 
+  if (assignedTo) {
+    return await db.select().from(chatConversations)
+      .where(eq(chatConversations.assignedTo, assignedTo))
+      .orderBy(desc(chatConversations.lastMessageAt));
+  }
+
   return await db.select().from(chatConversations)
     .orderBy(desc(chatConversations.lastMessageAt));
+}
+
+export async function assignChatConversation(conversationId: number, userId: number | null): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  await db.update(chatConversations)
+    .set({ assignedTo: userId })
+    .where(eq(chatConversations.id, conversationId));
 }
 
 export async function markChatMessagesAsRead(conversationId: number): Promise<void> {

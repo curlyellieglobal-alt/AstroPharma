@@ -75,7 +75,8 @@ export const chatConversations = mysqlTable("chatConversations", {
 	lastMessageAt: timestamp({ mode: 'string' }).default('CURRENT_TIMESTAMP').notNull(),
 	createdAt: timestamp({ mode: 'string' }).default('CURRENT_TIMESTAMP').notNull(),
 	updatedAt: timestamp({ mode: 'string' }).defaultNow().onUpdateNow().notNull(),
-});
+		assignedTo: int().references(() => users.id, { onDelete: "set null" }),
+	});
 
 export const chatMessages = mysqlTable("chatMessages", {
 	id: int().autoincrement().notNull(),

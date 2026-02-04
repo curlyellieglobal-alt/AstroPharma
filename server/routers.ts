@@ -788,8 +788,36 @@ export const appRouter = router({
     
     // Get all conversations (admin)
     getConversations: adminProcedure
-      .query(async () => {
-        return await db.getAllChatConversations();
+      .input(z.object({ assignedTo: z.number().optional() }).optional())
+      .query(async ({ input }) => {
+        return await db.getAllChatConversations(input?.assignedTo);
+      }),
+
+    // Assign conversation to staff
+    assignTo: adminProcedure
+      .input(z.object({ 
+        conversationId: z.number(), 
+        userId: z.number().nullable() 
+      }))
+      .mutation(async ({ input }) => {
+        await db.assignChatConversation(input.conversationId, input.userId);
+        
+        // Send notification if assigned to a user
+        if (input.userId) {
+          try {
+            await db.createNotification({
+              userId: input.userId,
+              type: "message",
+              title: "محادثة جديدة موكلة إليك",
+              message: "تم تعيينك للرد على محادثة عميل جديدة.",
+              link: "/admin/chat",
+            });
+          } catch (error) {
+            console.error("Failed to send assignment notification:", error);
+          }
+        }
+        
+        return { success: true };
       }),
     
     // Mark messages as read
