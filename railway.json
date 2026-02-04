@@ -8,7 +8,10 @@
     "startCommand": "pnpm run start",
     "restartPolicyType": "ON_FAILURE",
     "healthcheckPath": "/api/health",
-    "healthcheckTimeout": 100,
+    "healthcheckTimeout": 300,
     "serviceName": "curlyellie"
+  },
+  "variables": {
+    "PORT": "3000"
   }
 }
