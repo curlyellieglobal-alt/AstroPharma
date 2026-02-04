@@ -18,9 +18,9 @@ export interface CompressionResult {
 }
 
 const DEFAULT_OPTIONS: CompressionOptions = {
-  maxWidth: 1200,
+  maxWidth: 1000,
   maxHeight: 1200,
-  quality: 80,
+  quality: 75,
   format: "webp",
 };
 

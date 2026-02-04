@@ -1,5 +1,7 @@
-import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
+import { publicProcedure, adminProcedure, router } from "../_core/trpc";
 import { auditAllPages, autoFixSEOIssues, getSEOScoreExplanation } from "../seoAutoFix";
+import * as db from "../db";
+import { z } from "zod";
 
 export const seoRouter = router({
   /**
@@ -24,11 +26,10 @@ export const seoRouter = router({
   /**
    * Auto-fix detected SEO issues
    */
-  autoFix: publicProcedure.mutation(async ({ input }: { input: any }) => {
+  autoFix: adminProcedure.mutation(async () => {
     try {
       const auditResult = await auditAllPages();
       const fixResult = await autoFixSEOIssues(auditResult.issues);
-
       return {
         success: true,
         data: {
@@ -47,30 +48,40 @@ export const seoRouter = router({
   }),
 
   /**
-   * Get detailed SEO score explanation
+   * Get SEO settings for a specific page
    */
-  getScoreExplanation: publicProcedure
-    .input((input: any) => input.score)
-    .query(({ input }) => {
-      return {
-        score: input,
-        explanation: getSEOScoreExplanation(input),
-      };
+  get: publicProcedure
+    .input(z.object({ pagePath: z.string() }))
+    .query(async ({ input }) => {
+      return await db.getSeoSettings(input.pagePath);
     }),
 
   /**
    * Get all SEO settings
    */
-  listAll: publicProcedure.query(async () => {
-    return [];
+  listAll: adminProcedure.query(async () => {
+    return await db.getAllSeoSettings();
   }),
 
   /**
    * Upsert SEO settings
    */
-  upsert: publicProcedure
-    .input((input: any) => input)
+  upsert: adminProcedure
+    .input(z.object({
+      pagePath: z.string(),
+      metaTitle: z.string().optional(),
+      metaDescription: z.string().optional(),
+      metaKeywords: z.string().optional(),
+      ogTitle: z.string().optional(),
+      ogDescription: z.string().optional(),
+      ogImage: z.string().optional(),
+      schemaMarkup: z.string().optional(),
+      canonicalUrl: z.string().optional(),
+      noIndex: z.boolean().optional(),
+      noFollow: z.boolean().optional(),
+    }))
     .mutation(async ({ input }) => {
+      await db.upsertSeoSettings(input as any);
       return { success: true };
     }),
 });
