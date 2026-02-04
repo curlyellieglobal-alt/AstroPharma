@@ -1,9 +1,0 @@
-{
-  "query": "INSERT INTO adminCredentials (email, passwordHash, name, isActive) VALUES ('Mohamedelsoulia@gmail.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcg7b3XeKeUxWdeS86E36P4/TVG2', 'Mohamed Elsoulia', true);",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute INSERT INTO adminCredentials (email, passwordHash, name, isActive) VALUES ('Mohamedelsoulia@gmail.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcg7b3XeKeUxWdeS86E36P4/TVG2', 'Mohamed Elsoulia', true);",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 25464
-}

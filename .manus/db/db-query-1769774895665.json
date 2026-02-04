@@ -1,9 +1,0 @@
-{
-  "query": "INSERT INTO savedReplies (adminId, replyType, content, displayOrder, isActive) VALUES \n(1, 'text', 'مرحباً! كيف يمكنني مساعدتك؟', 1, 1),\n(1, 'text', 'شكراً لك على سؤالك. يسعدني الإجابة عليه.', 2, 1),\n(1, 'text', 'هل لديك أي استفسارات أخرى؟', 3, 1),\n(1, 'text', 'يمكنك تتبع طلبك من خلال رقم الطلب.', 4, 1),\n(1, 'text', 'سياسة الإرجاع لدينا: 30 يوم من تاريخ الشراء.', 5, 1);",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute INSERT INTO savedReplies (adminId, replyType, content, displayOrder, isActive) VALUES \n(1, 'text', 'مرحباً! كيف يمكنني مساعدتك؟', 1, 1),\n(1, 'text', 'شكراً لك على سؤالك. يسعدني الإجابة عليه.', 2, 1),\n(1, 'text', 'هل لديك أي استفسارات أخرى؟', 3, 1),\n(1, 'text', 'يمكنك تتبع طلبك من خلال رقم الطلب.', 4, 1),\n(1, 'text', 'سياسة الإرجاع لدينا: 30 يوم من تاريخ الشراء.', 5, 1);",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 1514
-}

@@ -1,8 +1,0 @@
-{
-  "query": "UPDATE site_settings SET settingValue = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663141241879/iXJllLmQFFrCCViD.png' WHERE settingKey = 'site_logo';",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute UPDATE site_settings SET settingValue = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663141241879/iXJllLmQFFrCCViD.png' WHERE settingKey = 'site_logo';",
-  "returncode": 1,
-  "logs": [
-    "ERROR 1146 (42S02) at line 1: Table 'fy8vmhzmgxlrjrhidtplfh.site_settings' doesn't exist"
-  ]
-}

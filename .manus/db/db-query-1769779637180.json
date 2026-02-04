@@ -1,9 +1,0 @@
-{
-  "query": "INSERT INTO siteSettings (settingKey, settingValue, settingType, description) VALUES ('site_logo', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663141241879/iXJllLmQFFrCCViD.png', 'text', 'Site logo URL');",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute INSERT INTO siteSettings (settingKey, settingValue, settingType, description) VALUES ('site_logo', 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663141241879/iXJllLmQFFrCCViD.png', 'text', 'Site logo URL');",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 1535
-}

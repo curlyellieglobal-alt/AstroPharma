@@ -1,8 +1,0 @@
-{
-  "query": "UPDATE products SET priceUSD = 40.00, priceEGP = 2000.00, priceEUR = 37.00, priceGBP = 32.00, priceSAR = 150.00, priceAED = 147.00 WHERE id = 1;\nUPDATE products SET priceUSD = 27.27, priceEGP = 1350.00, priceEUR = 25.00, priceGBP = 21.60, priceSAR = 102.00, priceAED = 100.00 WHERE id = 2;\nUPDATE products SET priceUSD = 11.11, priceEGP = 550.00, priceEUR = 10.20, priceGBP = 8.80, priceSAR = 41.60, priceAED = 40.80 WHERE id = 3;",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute UPDATE products SET priceUSD = 40.00, priceEGP = 2000.00, priceEUR = 37.00, priceGBP = 32.00, priceSAR = 150.00, priceAED = 147.00 WHERE id = 1;\nUPDATE products SET priceUSD = 27.27, priceEGP = 1350.00, priceEUR = 25.00, priceGBP = 21.60, priceSAR = 102.00, priceAED = 100.00 WHERE id = 2;\nUPDATE products SET priceUSD = 11.11, priceEGP = 550.00, priceEUR = 10.20, priceGBP = 8.80, priceSAR = 41.60, priceAED = 40.80 WHERE id = 3;",
-  "returncode": 1,
-  "logs": [
-    "ERROR 1054 (42S22) at line 1: Unknown column 'priceUSD' in 'field list'"
-  ]
-}

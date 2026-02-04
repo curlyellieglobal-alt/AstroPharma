@@ -1,9 +1,0 @@
-{
-  "query": "SELECT settingKey, settingValue FROM siteSettings WHERE settingKey LIKE '%whatsapp%' ORDER BY settingKey;",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user eJpiKG8HujqiSsZ.root --database fy8vMHZMgXLRjRhidtpLfH --execute SELECT settingKey, settingValue FROM siteSettings WHERE settingKey LIKE '%whatsapp%' ORDER BY settingKey;",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 1545
-}
