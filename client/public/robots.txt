@@ -1,0 +1,32 @@
+# Robots.txt for CurlyEllie - Premium Hair Care
+# This file tells search engines how to crawl and index the website
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /api/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://curlyshop-fy8vmhzm.manus.space/sitemap.xml
